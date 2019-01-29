@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Prevent Pointer Focus Demo</title>
   <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1" />
+  <meta name="viewport" content="width=device-width" />
   <style>
     :focus {
       outline: 3px solid red;
       outline-offset: 0;
     }
-    .pressed {
+    .pressed,
+    .no-outline {
       outline: none;
     }
   </style>
@@ -62,7 +63,7 @@
     <input type="file" />
   </p>
 
-  <p>
+  <p class="no-outline">
     <input type="color" value="#ffff00" />
   </p>
 
@@ -71,8 +72,9 @@
   </p>
 
   <p>
-    <div tabindex="0">tabindex="0"</div>
-    <div tabindex="-1">tabindex="-1"</div>
+    <span tabindex="0">tabindex="0"</span>
+    <br />
+    <span tabindex="-1">tabindex="-1"</span>
   </p>
 <script type="text/javascript" src="demo.min.js"></script></body>
 
